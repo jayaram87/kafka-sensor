@@ -1,0 +1,7 @@
+requests
+confluent-kafka
+pandas
+pymongo[srv]
+certifi
+jsonschema
+-e .
