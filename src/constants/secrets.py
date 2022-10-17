@@ -1,12 +1,13 @@
-mongodb_pwd = 'manutd87'
-mongodb_url = f'mongodb+srv://jayaram87:{mongodb_pwd}@cluster0.1ks0bon.mongodb.net/?retryWrites=true&w=majority'
+import os
+
+mongodb_url = os.getenv('DB_SENSOR_URL', None)
 
 # kafka api
-api_key = 'C3B4BDNU4PMSV23U'
-api_secret = '+YYAEbhiZs+S5SkobYPNMTLBEehu0wDOWmL26fvv84hc7pdDgHAGRXv7QkZkwBrp'
-api_url = 'pkc-lzvrd.us-west4.gcp.confluent.cloud:9092'
+api_key = os.getenv('API_KEY', None)
+api_secret = os.getenv('API_SECRET_KEY', None)
+api_url = os.getenv('BOOTSTRAP_SERVER', None)
 
 # kafka schema 
-schema_url = 'https://psrc-8kz20.us-east-2.aws.confluent.cloud'
-schema_api_key = 'LICVXWJE7H2I2NYI'
-schema_api_secret = 'dbaCQ0rlpnmpwtMSKt+iAO9dAg4ecRBCB1eo9SylFFpqCrhK15S/Y7KvdLnYOwfX'
+schema_url = os.getenv('ENDPOINT_SCHEMA_URL', None)
+schema_api_key = os.getenv('SCHEMA_REGISTRY_API_KEY', None)
+schema_api_secret = os.getenv('SCHEMA_REGISTRY_API_SECRET', None)
